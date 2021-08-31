@@ -2,7 +2,7 @@ steps:
   # Compile
   - name: maven:3-jdk-8
     entrypoint: mvn
-    args: [ "clean package" ]
+    args: [ "package" ]
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/strong-market-322501/customer-service-0.1', '.']
